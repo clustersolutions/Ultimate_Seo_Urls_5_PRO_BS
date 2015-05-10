@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Operation - ULTIMATE Seo Urls 5 by FWR Media</title>
+<style type="text/css">
+body {
+  font-family: verdana, sans-serif;
+  font-size: 8pt;
+  margin: 0;
+  padding: 0;
+  background-color: #FCFCE8;
+}
+h1 {
+  font-size: 16pt;
+  color: #00598E;
+}
+h2 {
+  font-size: 13pt;
+  color: #00598E;
+}
+h3 {
+  font-size: 11pt;
+  text-decoration: underline;
+  color: #00598E;
+}
+form {
+margin: 0;
+padding: 0;
+}
+input {
+margin: 0;
+padding: 0;
+}
+#container {
+  margin: 3em 6em 6em 6em;
+  border: 1px solid #ccc;
+}
+#inner_container {
+  margin: 0.1em;
+  padding: 1em;
+  background-color: #FFF;
+  position: relative;
+}
+#header {
+  background-color: #3898D3;
+  width: 100%;
+  height: 8em;
+}
+.error {
+  color: red;
+  padding: 0.5em;
+}
+.success {
+  color: green;
+  padding: 0.5em;
+}
+.messagesuccess {
+  border: 1px solid green;
+  color: green;
+  padding: 1em;
+  background-color: #ffffcc;
+}
+.messageerror {
+  border: 1px solid red;
+  color: red;
+  padding: 1em;
+  background-color: #FFE6E6;
+}
+.spacer {
+  padding: 0.5em;
+}
+#message_header {
+  color: #660000;
+  padding: 0.5em;
+  font-size: 14pt;
+  font-family: verdana;  
+}
+#fwrfooter a { 
+  position: absolute;
+  bottom: 0.3em;
+  padding-left: 2em;
+  text-decoration: none;
+  color: #00598E;
+}
+.smalltext {
+  font-size: 8pt;
+  font-family: tahoma, verdana;
+}
+#messages_container {
+  background-color: #fff;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  width: 50%;
+}
+.dormant {
+  color: orange;
+  padding: 0.5em;
+  font-style: italic;
+}
+#fwrTitle1 {
+  color: #0073BA;
+  font-size: 28pt;
+}
+#fwrTitle2 {
+  color: #00598E;
+  font-size: 28pt;
+}
+code {
+  background-color: #E2F9E2;
+}
+</style>
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <img style="padding: 0.6em; float: right;" src="includes/fwrlogo.png" width="73" height="73" alt="FWR Media" />
+    <span style="padding: 0.5em 0.5em 0.5em 1.5em; position: relative;  top: 1.6em;"><span id="fwrTitle1">Ultimate Seo Urls</span><span style="color: red; font-size: 24pt;"> 5</span><span id="fwrTitle2"> PRO</span><br /><span style="font-family: verdana; font-size: xx-small; color: #fff; padding-left: 3em; font-weight: bold;">Version 1.1.0</span></span>
+  </div>
+  <div id="inner_container">
+    <h1>Settings and Operation</h1>
+    <h3>Location in admin panel</h3>
+    admin &raquo; Configuration &raquo; Seo Urls 5
+    <h3>Settings and what they do</h3>
+    <ul>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Enable SEO URLs</span>
+        <ul>
+          <li>Effectively an on/off switch .. true being on .. false off</li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Enable the cache</span>
+        <ul>
+          <li>Effectively an on/off switch for the caching system .. true being on .. false off</li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Enable multi language support</span>
+        <ul>
+          <li>Turn on/off the multi language functionality .. true being on .. false off</li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Output W3C valid URIs</span>
+        <ul>
+          <li>Output W3C valid links that won't break your validation</li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Select your chosen cache system</span>
+        <ul>
+          <li><b>File:</b><br />
+            Stores the cache as a text file. No queries are used after the cache is fully loaded.
+          </li>
+          <li><b>SQLite:</b><br />
+            Stores the cache in an SQLite database. No MySQL queries are used after the cache is fully loaded.
+          </li>
+          <li><b>MySQL:</b><br />
+            Stores the cache in the database.
+          </li>
+          <li><b>Memcache:</b><br />
+            Super fast Memcached option. Requires Memcache compiled in apache.<br />
+            This is really only a solution for shops running on dedicated/VPS servers as it is unlikely to be available in shared hosting<br />
+            Read the benefits <a href="http://www.danga.com/memcached/" title="Memcached">here</a>.
+          </li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Set the number of days to store the cache</span>
+        <ul>
+          <li>How many days a cache will be kept before auto deleting itself.</li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Choose the URI format</span>
+        <ul>
+          <li>There are 4 options
+            <p><u>The difference between the four is shown below: -</u></p>
+            <ul>
+              <li style="padding: 0.3em;"><span style="font-style: italic;">Standard Seo Urls ( does not require mod_rewrite )</span>
+                <ul>
+                  <li style="padding: 0.3em;">www.mysite.com/product_info.php/the-brand-etc-great-product-p-3</li>
+                </ul>
+              </li>
+              <li style="padding: 0.3em;"><span style="font-style: italic;">Path Standard Seo Urls ( does not require mod_rewrite )</span>
+                <ul>
+                  <li style="padding: 0.3em;">www.mysite.com/product_info.php/the-brand-etc/great-product-p-3</li>
+                </ul>
+              </li>
+              <li style="padding: 0.3em;"><span style="font-style: italic;">Traditional Rewrite Seo Urls ( Requires mod_rewrite and RewriteRules added to .htaccess )</span>
+                <ul>
+                  <li style="padding: 0.3em;">www.mysite.com/the-brand-etc-great-product-p-3.html</li>
+                </ul>
+              </li>
+              <li style="padding: 0.3em;"><span style="font-style: italic;">Path Rewrite Seo Urls ( Requires mod_rewrite and RewriteRules added to .htaccess )</span>
+                <ul>
+                  <li style="padding: 0.3em;">www.mysite.com/the-brand-etc/great-product-p-3.html</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Choose how your product link text is made up</span>
+        <ul>
+          <li>There are 49 different ways to write your products link text. Any combination of the below ( e.g. bp produces brand-product name or brand/product name if the uri type is path based )
+            <ul>
+              <li>p = products name</li>
+              <li>c = category name</li>
+              <li>b = manufacturer name ( b for brand )</li>
+              <li>m = model</li>
+            </ul>
+          </li>
+          <li> cbmp produces category-brand-model-product-name or category/brand/model/product-name if the uri type is path based</li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Filter Short Words</span>
+        <ul>
+          <li>When creating a link from a product name you may want to remove the shorter words .. like a | or | at | the .. etc.<br />
+              Default value is 1 but you can choose to filter short words of 1 2 or 3 letters.<br />
+              A setting of 3 would filter out all words of three letters or less.
+          </li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Add category parent to the beginning of the url</span>
+        <ul>
+          <li>Enables/disables the option of adding the category parent to the beginning of category URLs.</li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Remove all non-alphanumeric characters</span>
+        <ul>
+          <li>Removes all non alphanumeric characters .. this is best left as true.<br />
+              If your language uses special characters you will need to use the conversion system see extras/character_conversion_pack/instructions.txt
+          </li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Add cPath to product URLs</span>
+        <ul>
+          <li>Adds ?cPath=x to the end of product urls .. not sure why ( perhaps menu highlighting ) but retained for backwards compatibility.</li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Enter special character conversions</span>
+        <ul>
+          <li>Convert/replace special language characters. As a comma seperated string .. like ..<br />character=>convert,char2=>convert
+              <p>While this can still be used it has been replaced by the files in<br />
+              catalog/includes/modules/ultimate_seo_urls5/includes/character_conversion/<br />
+              To revert to using this method just delete all the files within the character_conversion folder .. <b>but not the folder itself.</b></p>
+              <p>See extras/character_conversion_pack/instructions.txt</p>
+          </li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Turn performance reporting on/off .. true being on .. false off</span>
+        <ul>
+          <li>Shows USU5 performance at the bottom of your web shop.</li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Turn variable reporting on/off .. true being on .. false off</span>
+        <ul>
+          <li>Shows USU5 class properties at the bottom of your web shop. Great for debugging.</li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Force www.mysite.com/ when www.mysite.com/index.php</span>
+        <ul>
+          <li>Redirects index.php to your base domain. <b>Beware!</b> on some servers this creates a redirect loop so turn it on .. try it .. if it creates a loop turn it OFF.</li>
+        </ul>
+      </li>
+      <li style="padding: 0.3em;"><span style="font-style: italic; font-weight: bold;">Reset SEO URLs Cache</span>
+        <ul>
+          <li>Clicking on "reset" will empty the cache.</li>
+        </ul>
+      </li>
+    </ul>
+    <div style="padding: 0.5em;">
+      <p>Thank you for donating, it allows us to spend more time developing free contributions for you to use.</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="L2MKTV24AC7WY" />
+        <input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online." />
+        <img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
+      </form>
+    </div>
+    <div style="padding-bottom: 3em;"></div>
+    <div id="fwrfooter"><a href="http://www.fwrmedia.co.uk" title="PHP - MySQL - osCommerce by FWR Media"> ... another script by FWR Media</a></div>
+  </div>
+</div>
+</body>
+</html>

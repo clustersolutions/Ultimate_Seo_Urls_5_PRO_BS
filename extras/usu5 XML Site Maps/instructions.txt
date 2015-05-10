@@ -1,0 +1,17 @@
+How to install it: -
+
+Upload the uploads directory maintaining the directory structure
+
+browse to the directory like .. www.mysite.com/catalog/usu5_sitemaps/
+
+Your 4 sitemap files should have been created in the root of your site and can be set in Google Webmaster Tools.
+sitemapIndex.xml
+sitemapProducts.xml
+sitemapManufacturers.xml
+sitemapCategories.xml
+
+Note: If your server doesn't allow file creation in root you may have to manually create these files and make them writeable.
+
+To set up a cron in your hosting panel you need to use the following command (* * * * * * will need to be set, see your hosting panel) ..
+
+* * * * * * wget -q http://www.somesite.com/folder/usu5_sitemaps/index.php >/dev/null 2>&1

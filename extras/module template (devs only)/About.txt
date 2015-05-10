@@ -1,0 +1,71 @@
+  /**
+  *
+  * ULTIMATE Seo Urls 5 PRO ( version 1.1 )
+  *
+  * 
+  * @package USU5_PRO
+  * @license http://www.opensource.org/licenses/gpl-2.0.php GNU Public License
+  * @link http://www.fwrmedia.co.uk
+  * @copyright Copyright 2008-2009 FWR Media
+  * @copyright Portions Copyright 2005 ( rewrite uri concept ) Bobby Easland
+  * @author Robert Fisher, FWR Media, http://www.fwrmedia.co.uk 
+  * @lastdev $Author:: Rob                                              $:  Author of last commit
+  * @lastmod $Date:: 2010-12-21 22:45:02 +0000 (Tue, 21 Dec 2010)       $:  Date of last commit
+  * @version $Rev:: 196                                                 $:  Revision of last commit
+  * @Id $Id:: About.txt 196 2010-12-21 22:45:02Z Rob                    $:  Full Details   
+  */
+
+
+Creating a module using the template Usu_Template.php should be very simple.
+
+Throughout the file you will find xxx or XXX or Xxx, these are the only parts that need changing. There are 13 but most are the same.
+
+I'll detail them below: -
+
+class Xxx_Page_Module extends aPage_Modules {
+
+Might become ..
+
+
+class My_Contribname_Page_Module extends aPage_Modules {
+
+You will find 7 of these .. xxx_id.
+
+These should all be the same value and represent the querystring key like cPath or products_id.
+
+So lets say your contribution uses contrib_id, you would change all instances of xxx_id to contrib_id
+
+Next see 'marker'     => '-xxx-'
+
+This relates to the marker you are using for seo urls e.g.
+
+products_id = -p-
+cPath = -c-
+
+So let's say your contribution has chosen -y- ( it should be one character only and must not have been already used )
+
+you change the code to ..
+
+'marker'     => '-y-'
+
+Now let's look at the query template ( if your query needs are more complex you will have to make the necessary mods yourself ) ..
+
+'query'      => "SELECT xxx FROM :TABLE_XXX WHERE contrib_id=':contrib_id' AND language_id=':languages_id' LIMIT 1",
+
+We have already changed the xxx_id so we now need to change the TABLE_XXX
+
+TABLE_XXX is the define for the table your contribution is accessing to retrieve the link text.
+
+e.g. for a products page the define would be TABLE_PRODUCTS_DESCRIPTION
+
+Let's say yours is TABLE_MY_CONTRIBUTION
+
+The table code should therefore be changed to ..
+
+'query'      => "SELECT xxx FROM :TABLE_MY_CONTRIBUTION WHERE contrib_id=':contrib_id' AND language_id=':languages_id' LIMIT 1",
+
+We are still left with one xxx in there and I can't guess that one it is the name of the field we are retrieving from the table TABLE_MY_CONTRIBUTION.
+
+Now we know the table define we can change the rest of the TABLE_XXX of which there are two more.
+
+That's it!! you should now have a working page module.

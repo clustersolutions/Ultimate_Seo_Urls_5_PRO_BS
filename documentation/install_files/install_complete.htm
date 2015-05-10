@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Install Complete - ULTIMATE Seo Urls 5 PRO by FWR Media</title>
+<link rel="stylesheet" type="text/css" href="../includes/style.css" />
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <img style="padding: 0.6em; float: right;" src="../includes/fwrlogo.png" width="73" height="73" alt="FWR Media" />
+    <span style="padding: 0.5em 0.5em 0.5em 1.5em; position: relative;  top: 1.6em;"><span id="fwrTitle1">Ultimate Seo Urls</span><span style="color: red; font-size: 24pt;"> 5</span><span id="fwrTitle2"> PRO</span><br /><span style="font-family: verdana; font-size: xx-small; color: #fff; padding-left: 3em; font-weight: bold;">Version 1.1.0</span></span>
+  </div>
+  <div id="inner_container">
+    <h1>Install Complete</h1>
+    <p>Please now visit the front of your web shop. If you hover over product and category links you should see that the links are now seo urls.</p>
+    <p>Initially standard urls are being produced. These look like www.mysite.com/catalog/index.php/hardware-c-1.</p>
+    <p>If you need to replicate the URLs from the old Seo Urls for SEO purposes or simply would like shorter URLs like .. www.mysite.com/catalog/hardware-c-1.html ( no index.php ),
+     you will need to change settings in the admin panel and add some code to your root .htaccess file.
+    </p>
+    <h2>catalog/.htaccess ( only needed if you intend to use rewrite urls )</h2>
+    <p>Open the file extras/htaccess.txt and copy the code to your root catalog/.htaccess.<br />
+      If you are upgrading from Chemos old seo urls or from Ultimate Seo Urls 5 by FWR media you will need to replace the code that is already in there.
+    </p>
+    <p><b>Important: </b> Please ensure that you change ReWriteBase correctly, the instructions are in the file. But to labour the point ...</p>
+    <ul>
+      <li style="padding: 0.5em;">Based on how you access your web shop modify RewriteBase as follows: -
+        <ul>
+          <li>I access my site as www.mysite.com/ - <b>RewriteBase /</b></li>
+          <li>I access my site as www.mysite.com/catalog/ - <b>RewriteBase /catalog/</b></li>
+          <li>I access my site as www.mysite.com/catalog/shop/ - <b>RewriteBase /catalog/shop/</b></li>
+        </ul>
+      </li>
+      <li>
+        <p><b>A note on *nix server settings for RewriteRules</b></p>
+        <p>mod_rewrite must be compiled in apache and AllowOverride set to ALL in httpd.conf ( usually this is already in place )</p>
+      </li>
+    </ul>
+    <h2>Windows IIS servers only</h2>
+    <p>
+      If you want to use ReWriteRules you have to have either ISAPI rewrite or IIS rewrite installed on the server, you will also have to have the .htaccess rules converted<br />
+      If you do this please email me a copy to help future IIS users.
+    </p>
+    <h2>Multi Language Capability</h2>
+    <p>This is the most exciting addition to USU5 PRO offering true multi language SEO Capability for the first time</p>
+    <p>Please <a href="multi_language.htm">click here</a> to learn more about mutli language.</p>
+    <h2>Some servers don't allow path based querystrings ( <i>Godaddy springs to mind</i> )</h2>
+    <p>
+      If with the standard and path standard uris you get page not found this probably means that your server does not allow path based querystrings. In such cases you will need to use the rewrite uri types.<br />
+      To test if your server has this issue try accessing your web shop like www.mysite.com/index.php/test/ if it fails to load the page then you have this problem.
+    </p>
+    <h2>I need to exactly replicate the URLs from my previous SEO Urls contribution</h2>
+    <p>If you are upgrading from Chemos old Seo Urls version 2 or from Ultimate Seo Urls 5 by FWR Media you may need to keep your urls exactly the same for seo purposes.</p>
+    <p>USU5 PRO has settings for full backwards compatibility so you can do this with no problem .. you will recognise the relevant settings in the admin panel.</p>
+    <h2>What we recommend you do now ( in order of priority )</h2>
+    <ul>
+      <li>1) Visit your admin panel and view the settings for USU5 PRO ( admin &gt; configuration &gt; Seo Urls 5 ) </li>
+      <li>2) <a href="../operation.htm">View the operation instructions</a></li>
+    </ul>
+    <div style="padding: 0.5em;"></div>
+    <div style="padding: 0.5em;">
+    <p>Thank you for donating, it allows us to spend more time developing free contributions for you to use.</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="L2MKTV24AC7WY" />
+        <input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online." />
+        <img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
+      </form>
+    </div>
+    <div style="padding: 0.5em;"></div>   
+    <div id="fwrfooter"><a href="http://www.fwrmedia.co.uk" title="PHP - MySQL - osCommerce by FWR Media"> ... another script by FWR Media</a></div>
+  </div>
+</div>
+</body>
+</html>
