@@ -305,7 +305,7 @@
         case $cache_type == 'sqlite':
           $query = str_replace( ':cache_name', $cache_name, $object->extract_query );
           $result = $object->getDb()->query( $query );
-          $row = $result->fetch();
+          $row = $result->fetchArray();
           if ( empty( $row ) ) {
             self::$performance['time_extracting_cache'] = number_format ( ( microtime( true ) - $timestart ), 4 );
             // return insert = true as there is nothing in the database

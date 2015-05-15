@@ -66,7 +66,7 @@
   /**
   * Set the default cache strategy to SQLite unless the class does not exist when we default to file.                            
   */
-  if ( !class_exists( 'SQLiteDatabase' ) ) {
+  if ( !class_exists( 'SQLite3' ) ) {
     $standard_cache_strategy = 'file';
   } else $standard_cache_strategy = 'sqlite';
   /**

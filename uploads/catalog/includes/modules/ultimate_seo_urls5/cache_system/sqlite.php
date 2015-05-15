@@ -96,11 +96,11 @@
     */
     protected static function createDatabase() {
       if ( !is_readable( self::$sqlite_db_file ) ) {
-        self::$db = new SQLiteDatabase( self::$sqlite_db_file, 0666, $error )
+        self::$db = new SQLite3( self::$sqlite_db_file, 0666, $error )
         or trigger_error( 'Failed: ' . $error, E_USER_WARNING );
         self::createTables();
       } else {
-        self::$db = new SQLiteDatabase( self::$sqlite_db_file, 0666, $error )
+        self::$db = new SQLite3( self::$sqlite_db_file, 0666, $error )
         or trigger_error( 'Failed: ' . $error, E_USER_WARNING );
       }
     }
@@ -125,7 +125,7 @@
           $data = serialize( $registry_vars ); // Serialize the registry of data
           $rawdata = base64_encode( gzdeflate( $data ) ); // encode and deflate
           $targets = array( ':cache_name', ':cache_data', ':cache_date' );
-          $replacements = array( sqlite_escape_string( self::$cache_name ), sqlite_escape_string( $rawdata ), date( "Y-m-d H:i:s" ) );
+          $replacements = array( self::$db->escapeString( self::$cache_name ), self::$db->escapeString( $rawdata ), date( "Y-m-d H:i:s" ) );
           $query = str_replace( $targets, $replacements, $this->insert_query );
           self::$db->query( $query );
         }
@@ -163,16 +163,16 @@
       }
     }
     /**
-    * Retrieve an instance of SQLiteDatabase
+    * Retrieve an instance of SQLite3
     * 
     * @access public
-    * @return SQLiteDatabase
+    * @return SQLite3
     */
     public function getDb() {
       return self::$db;
     }
     /**
-    * Create the initial table and fileds for SQLiteDatabase
+    * Create the initial table and fileds for SQLite3
     * @access private
     */
     private static function createTables() {
