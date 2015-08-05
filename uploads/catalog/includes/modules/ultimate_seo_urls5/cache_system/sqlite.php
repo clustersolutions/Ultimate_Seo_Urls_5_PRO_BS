@@ -96,12 +96,20 @@
     */
     protected static function createDatabase() {
       if ( !is_readable( self::$sqlite_db_file ) ) {
-        self::$db = new SQLite3( self::$sqlite_db_file, 0666, $error )
-        or trigger_error( 'Failed: ' . $error, E_USER_WARNING );
+        try {
+          self::$db = new SQLite3( self::$sqlite_db_file );
+        }
+        catch (Exception $exception) {
+          trigger_error( 'Failed: ' . $exception->getMessage(), E_USER_WARNING );
+        }
         self::createTables();
       } else {
-        self::$db = new SQLite3( self::$sqlite_db_file, 0666, $error )
-        or trigger_error( 'Failed: ' . $error, E_USER_WARNING );
+        try {
+          self::$db = new SQLite3( self::$sqlite_db_file );
+        }
+        catch (Exception $exception) {
+          trigger_error( 'Failed: ' . $exception->getMessage(), E_USER_WARNING );
+        }
       }
     }
     /**
